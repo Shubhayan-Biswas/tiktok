@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Tiktok Followers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            comic: ['Comic Sans MS', 'cursive', 'sans-serif'],
+          },
+          keyframes: {
+            gradient: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            },
+            fadein: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            gradient: 'gradient 15s ease infinite',
+            fadein: 'fadein 1.2s cubic-bezier(0.4,0,0.2,1) both',
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Comic+Sans+MS:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+  let button1Clicks = 0;
+  let button2Clicks = 0;
+  let button3Clicks = 0;
+
+  function startLoading() {
+    const fakeMessages = [
+        "Connecting to TikTok servers...",    // Corresponds to 0-10%
+        "Authenticating your request...",     // Corresponds to 20%
+        "Analyzing account data...",          // Corresponds to 40%
+        "Preparing follower boost...",        // Corresponds to 60%
+        "Finalizing parameters...",           // Corresponds to 80%
+        "Almost there... Just a moment!"      // Corresponds to 100%
+    ];
+    let messageIndex = 0;
+
+    document.getElementById('loadingMessage').innerHTML = fakeMessages[messageIndex];
+    document.getElementById('loadingProgress').innerHTML = `Loading: 0%`; // Initialize progress at 0%
+
+    let progress = 0;
+    const interval = setInterval(function() {
+      progress += 10;
+
+      if (progress <= 100) {
+        if (progress >= 100) messageIndex = 5;
+        else if (progress >= 80) messageIndex = 4;
+        else if (progress >= 60) messageIndex = 3;
+        else if (progress >= 40) messageIndex = 2;
+        else if (progress >= 20) messageIndex = 1;
+        // messageIndex remains 0 for progress < 20
+
+        document.getElementById('loadingMessage').innerHTML = fakeMessages[messageIndex];
+        document.getElementById('loadingProgress').innerHTML = `Loading: ${progress}%`;
+      } else {
+        document.getElementById('loadingMessage').innerHTML = '<b>Click on the following buttons 10 times each To claim TikTok Followers</b>';
+        clearInterval(interval);
+        document.querySelector('.buttonContainer').classList.remove('hidden');
+        document.querySelector('.clickCounters').classList.remove('hidden');
+      }
+    }, 1000);
+  }
+
+  function buttonClick(buttonId) {
+    if (buttonId === 'button1') {
+      button1Clicks++;
+      document.getElementById('button1Counter').innerHTML = `Button 1 Clicks: ${button1Clicks}`;
+    } else if (buttonId === 'button2') {
+      button2Clicks++;
+      document.getElementById('button2Counter').innerHTML = `Button 2 Clicks: ${button2Clicks}`;
+    } else if (buttonId === 'button3') {
+      button3Clicks++;
+      document.getElementById('button3Counter').innerHTML = `Button 3 Clicks: ${button3Clicks}`;
+    }
+    if (button1Clicks === 10 && button2Clicks === 10 && button3Clicks === 10) {
+      document.getElementById('claimButton').disabled = false;
+    }
+    const buttonLinks = {
+      'button1': 'https://sawutser.top/4/7298800',
+      'button2': 'https://sawutser.top/4/7278137',
+      'button3': 'https://sawutser.top/4/7278139',
+    };
+    window.open(buttonLinks[buttonId], '_blank');
+  }
+
+  function claimReward() {
+    window.open('https://sawutser.top/4/9297031', '_blank');
+  }
+  </script>
+</head>
+<body onload="startLoading()" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-400 via-purple-400 via-indigo-500 to-teal-400 animate-gradient bg-[length:400%_400%] font-inter">
+  <div id="loadingContainer" class="relative max-w-lg w-full mx-4 sm:mx-auto bg-white/60 backdrop-blur-md border border-white/30 shadow-2xl rounded-3xl px-6 py-10 sm:p-12 flex flex-col items-center animate-fadein">
+    <h1 class="text-3xl sm:text-4xl font-bold font-inter text-gray-900 mb-2 tracking-tight text-center">Get TikTok Followers</h1>
+    <p class="text-base sm:text-lg text-gray-700 mb-8 text-center font-inter">Complete the steps below to claim your followers!</p>
+    <div id="loadingMessage" class="font-comic text-lg mb-4 text-center"></div>
+    <div id="loadingProgress" class="font-comic text-base mb-4 text-center"></div>
+    <!-- Buttons to click -->
+    <div class="buttonContainer hidden flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full mb-6">
+      <button id="button1" onclick="buttonClick('button1')" class="font-comic px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-xl shadow-md transition hover:from-indigo-500 hover:to-purple-500 hover:scale-105 disabled:bg-gray-300 disabled:cursor-not-allowed w-full sm:w-auto">Button 1</button>
+      <button id="button2" onclick="buttonClick('button2')" class="font-comic px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-xl shadow-md transition hover:from-indigo-500 hover:to-purple-500 hover:scale-105 disabled:bg-gray-300 disabled:cursor-not-allowed w-full sm:w-auto">Button 2</button>
+      <button id="button3" onclick="buttonClick('button3')" class="font-comic px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-xl shadow-md transition hover:from-indigo-500 hover:to-purple-500 hover:scale-105 disabled:bg-gray-300 disabled:cursor-not-allowed w-full sm:w-auto">Button 3</button>
+    </div>
+    <!-- Click counters -->
+    <div class="clickCounters hidden mt-2 mb-8 w-full flex flex-col items-center space-y-1">
+      <div id="button1Counter" class="font-comic text-gray-800">Button 1 Clicks: 0</div>
+      <div id="button2Counter" class="font-comic text-gray-800">Button 2 Clicks: 0</div>
+      <div id="button3Counter" class="font-comic text-gray-800">Button 3 Clicks: 0</div>
+    </div>
+    <!-- Claim button -->
+    <button id="claimButton" onclick="claimReward()" disabled class="font-comic mt-2 px-8 py-3 bg-gradient-to-r from-teal-400 via-purple-400 to-indigo-500 text-white text-lg font-bold rounded-2xl shadow-lg transition hover:from-indigo-500 hover:to-teal-400 hover:scale-105 disabled:bg-gray-300 disabled:cursor-not-allowed w-full sm:w-auto">Now You can Claim</button>
+  </div>
+  <style>
+    .font-comic { font-family: 'Comic Sans MS', cursive, sans-serif; }
+  </style>
+</body>
+</html>
+
+
+
